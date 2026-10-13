@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "copperlogic:input_cell"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " R ",
+            "CQC",
+            "SSS"
+        ],
+        "key": {
+            "C": { "item": "minecraft:copper_ingot" },
+            "Q": { "item": "minecraft:quartz" },
+            "R": { "item": "minecraft:redstone" },
+            "S": { "item": "minecraft:smooth_stone" }
+        },
+        "unlock": [{ "item": "minecraft:quartz" }],
+        "result": { "item": "copperlogic:input_cell", "count": 2 }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "copperlogic:copper_wire",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "copperlogic:n": [false, true],
+                "copperlogic:e": [false, true],
+                "copperlogic:s": [false, true],
+                "copperlogic:w": [false, true],
+                "copperlogic:powered": [false, true],
+                "copperlogic:n_up": [false, true],
+                "copperlogic:e_up": [false, true],
+                "copperlogic:s_up": [false, true],
+                "copperlogic:w_up": [false, true]
+            }
+        },
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.copperlogic_wire",
+                "bone_visibility": {
+                    "dot": "!q.block_state('copperlogic:n') && !q.block_state('copperlogic:e') && !q.block_state('copperlogic:s') && !q.block_state('copperlogic:w')",
+                    "north": "q.block_state('copperlogic:n') || (q.block_state('copperlogic:s') && !q.block_state('copperlogic:e') && !q.block_state('copperlogic:w'))",
+                    "south": "q.block_state('copperlogic:s') || (q.block_state('copperlogic:n') && !q.block_state('copperlogic:e') && !q.block_state('copperlogic:w'))",
+                    "east": "q.block_state('copperlogic:e') || (q.block_state('copperlogic:w') && !q.block_state('copperlogic:n') && !q.block_state('copperlogic:s'))",
+                    "west": "q.block_state('copperlogic:w') || (q.block_state('copperlogic:e') && !q.block_state('copperlogic:n') && !q.block_state('copperlogic:s'))",
+                    "north_up": "q.block_state('copperlogic:n_up')",
+                    "east_up": "q.block_state('copperlogic:e_up')",
+                    "south_up": "q.block_state('copperlogic:s_up')",
+                    "west_up": "q.block_state('copperlogic:w_up')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "copperlogic:copper_wire_off",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 1, 16]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": [
+                            { "tags": "!q.any_tag('copperlogic:wire')" }
+                        ]
+                    }
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:map_color": "#b4684d",
+            "minecraft:tags": ["copperlogic:wire"]
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('copperlogic:powered')",
+
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "copperlogic:copper_wire_on",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

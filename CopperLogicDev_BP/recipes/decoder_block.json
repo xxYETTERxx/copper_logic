@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "copperlogic:decoder_block"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " G ",
+            "RQR",
+            "SSS"
+        ],
+        "key": {
+            "G": { "item": "minecraft:glowstone_dust" },
+            "Q": { "item": "minecraft:quartz" },
+            "R": { "item": "minecraft:redstone" },
+            "S": { "item": "minecraft:smooth_stone" }
+        },
+        "unlock": [{ "item": "minecraft:quartz" }],
+        "result": { "item": "copperlogic:decoder_block", "count": 2 }
+    }
+}

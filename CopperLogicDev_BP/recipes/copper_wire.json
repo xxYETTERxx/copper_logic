@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "copperlogic:copper_wire"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:copper_ingot" },
+            { "item": "minecraft:redstone" }
+        ],
+        "unlock": [{ "item": "minecraft:copper_ingot" }],
+        "result": { "item": "copperlogic:copper_wire", "count": 4 }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Copper Logic Dev BP",
+        "description": "Byte-wide copper signals. Behavior pack.",
+        "uuid": "9507dbd5-f501-49ef-9f36-88a8e95dd85e",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            40
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "f99fe9dd-5568-42f0-8cc9-d833b1bcbee5",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "4feb352e-c524-42bd-adc9-15d292c0ad71",
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "fa1cabbc-96d4-47fe-8ebe-bac9fb11780f",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.5.0"
+        }
+    ]
+}

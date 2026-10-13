@@ -1,0 +1,5 @@
+tile.copperlogic:input_cell.name=Input Cell
+tile.copperlogic:output_block.name=Output Block
+tile.copperlogic:copper_wire.name=Copper Wire
+tile.copperlogic:decoder_block.name=Decoder Block
+item.copperlogic:copper_wire.name=Copper Wire

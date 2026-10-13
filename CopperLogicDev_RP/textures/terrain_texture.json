@@ -1,0 +1,47 @@
+{
+    "resource_pack_name": "copperlogic",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "copperlogic:input_cell_side": {
+            "textures": "textures/blocks/input_cell_side"
+        },
+        "copperlogic:input_cell_top": {
+            "textures": "textures/blocks/input_cell_top"
+        },
+
+        "copperlogic:copper_wire_off": {
+            "textures": "textures/blocks/copper_block"
+        },
+        "copperlogic:copper_wire_on": {
+            "textures": "textures/blocks/copper_bulb_lit"
+        },
+        "copperlogic:input_cell_side_redstone": {
+            "textures": "textures/blocks/input_cell_side_redstone"
+        },
+        "copperlogic:input_cell_side_copper": {
+            "textures": "textures/blocks/input_cell_side_copper"
+        },
+        "copperlogic:output_block_side": {
+            "textures": "textures/blocks/output_block_side"
+        },
+        "copperlogic:output_block_side_copper": {
+            "textures": "textures/blocks/output_block_side_copper"
+        },
+        "copperlogic:output_block_side_redstone": {
+            "textures": "textures/blocks/output_block_side_redstone"
+        },
+        "copperlogic:output_block_top": {
+            "textures": "textures/blocks/output_block_top"
+        },
+        "copperlogic:decoder_block_side": {
+            "textures": "textures/blocks/decoder_block_side"
+        },
+        "copperlogic:decoder_block_side_redstone": {
+            "textures": "textures/blocks/decoder_block_side_redstone"
+        },
+        "copperlogic:decoder_block_top": {
+            "textures": "textures/blocks/decoder_block_top"
+        }
+
+    }
+}

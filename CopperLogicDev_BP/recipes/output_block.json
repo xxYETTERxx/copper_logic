@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "copperlogic:output_block"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " G ",
+            "CQC",
+            "SSS"
+        ],
+        "key": {
+            "C": { "item": "minecraft:copper_ingot" },
+            "G": { "item": "minecraft:glowstone_dust" },
+            "Q": { "item": "minecraft:quartz" },
+            "S": { "item": "minecraft:smooth_stone" }
+        },
+        "unlock": [{ "item": "minecraft:quartz" }],
+        "result": { "item": "copperlogic:output_block", "count": 2 }
+    }
+}

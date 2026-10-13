@@ -1,0 +1,18 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "copperlogic:copper_wire",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": "copperlogic:copper_wire",
+            "minecraft:block_placer": {
+                "block": "copperlogic:copper_wire",
+                "replace_block_item": true
+            }
+        }
+    }
+}

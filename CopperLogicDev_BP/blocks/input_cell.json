@@ -1,0 +1,86 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "copperlogic:input_cell",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "copperlogic:powered": [false, true],
+                "copperlogic:glow": ["none", "redstone", "copper"]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"]
+                }
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "copperlogic:input_cell_side"
+                },
+                "up": {
+                    "texture": "copperlogic:input_cell_top"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:map_color": "#b4684d",
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
+            "copperlogic:bit_input": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 180, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, -90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:glow') == 'redstone'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:input_cell_side_redstone" },
+                        "up": { "texture": "copperlogic:input_cell_top" }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:glow') == 'copper'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:input_cell_side_copper" },
+                        "up": { "texture": "copperlogic:input_cell_top" }
+                    }
+                }
+            }
+        ]
+    }
+}

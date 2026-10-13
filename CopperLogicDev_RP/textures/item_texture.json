@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "copperlogic",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "copperlogic:copper_wire": {
+            "textures": "textures/items/copper_wire"
+        }
+    }
+}

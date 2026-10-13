@@ -1,0 +1,99 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "copperlogic:output_block",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "copperlogic:active": [false, true],
+                "copperlogic:emit": ["none", "north", "south", "east", "west"]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": { "texture": "copperlogic:output_block_side" },
+                "up": { "texture": "copperlogic:output_block_top" }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:map_color": "#b4684d",
+            "minecraft:redstone_producer": {
+                "power": 0
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('copperlogic:active') && q.block_state('copperlogic:emit') == 'none'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:output_block_side_copper" },
+                        "up": { "texture": "copperlogic:output_block_top" }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:emit') == 'north'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:output_block_side_redstone" },
+                        "up": { "texture": "copperlogic:output_block_top" }
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "north",
+                        "connected_faces": ["north"]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:emit') == 'south'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:output_block_side_redstone" },
+                        "up": { "texture": "copperlogic:output_block_top" }
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "south",
+                        "connected_faces": ["south"]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:emit') == 'east'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:output_block_side_redstone" },
+                        "up": { "texture": "copperlogic:output_block_top" }
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "east",
+                        "connected_faces": ["east"]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('copperlogic:emit') == 'west'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "copperlogic:output_block_side_redstone" },
+                        "up": { "texture": "copperlogic:output_block_top" }
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "west",
+                        "connected_faces": ["west"]
+                    }
+                }
+            }
+        ]
+    }
+}
